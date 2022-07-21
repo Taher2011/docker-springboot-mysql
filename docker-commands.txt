@@ -36,3 +36,15 @@ Note : run will create new container whereas start restart stopped container
 
 9) list all networks
 ====> docker network
+
+
+10) push image to docker hub
+====> docker tag [imageName]:[tag] [docker hub ID]/[imageName]:[tag]
+Note : [imageName]:[tag] should be existing imageName with attached tag to it
+	   [docker hub ID]/[imageName]:[tag]  can be same or new imageName and version
+====> docker push [docker hub ID]/[imageName]:[tag]
+
+
+11) pull image from docker hub
+====> docker pull [docker hub ID]/[imageName]:[tag]
+	   
