@@ -1,0 +1,38 @@
+1) create image from Dockerfile
+====> docker build -t [imageName] .
+Note : in above command '.' specify current directory where Dockerfile and target folder exists
+
+
+2) list images
+====> docker images
+
+
+3) create container from image
+====> docker run -p 8081:8080 --name=[containerName] [imageName]
+Note : 8081 is port of host m/c where 8080 is port of container
+
+
+4) list all containers whether running or not
+====> docker container ps -a
+
+
+5) list all running containers
+====> docker container ps
+
+
+6) debug container file system
+====> docker exec -it [containerName]  bash
+Note : above command will return, root@[containerName]:/#  and we can out from container using exit
+
+
+7) stop container
+====> docker stop [containerName]
+
+
+8) restart container
+====> docker start [containerName]
+Note : run will create new container whereas start restart stopped container
+
+
+9) list all networks
+====> docker network
