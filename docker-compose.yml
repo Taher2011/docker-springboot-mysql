@@ -3,13 +3,10 @@ services:
   mysqldb:
     container_name: mysqldb
     image: mysql
-    cap_add:
-      - SYS_NICE
-    restart: always
     volumes:
       - /c/Exatip/Tutorials/DockerTutorial/db/mysql_db:/var/lib/mysql
     ports:
-      - 3307:3306
+      - 3308:3306
     environment:
       MYSQL_DATABASE: emp
       MYSQL_ROOT_PASSWORD: emp@123
@@ -27,4 +24,4 @@ services:
       MYSQL_PASSWORD: emp@123
       SPRINGBOOT_APP_PORT: 5050
       
-# /c/Exatip/Tutorials/DockerTutorial/db/mysql_db is local host m/c path
+# /c/Exatip/Tutorials/DockerTutorial/db/mysql_db is local host m/c path      

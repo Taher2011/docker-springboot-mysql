@@ -47,4 +47,3 @@ Note : [imageName]:[tag] should be existing imageName with attached tag to it
 
 11) pull image from docker hub
 ====> docker pull [docker hub ID]/[imageName]:[tag]
-	   
