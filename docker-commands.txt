@@ -38,12 +38,18 @@ Note : run will create new container whereas start restart stopped container
 ====> docker network
 
 
-10) push image to docker hub
+10) run docker compose file
+====> docker-compose up
+Note : if file is other than default file i.e. docker-compose.yml , then docker command would be 
+====> docker-compose -f[name of docker compose file] up
+
+
+11) push image to docker hub
 ====> docker tag [imageName]:[tag] [docker hub ID]/[imageName]:[tag]
 Note : [imageName]:[tag] should be existing imageName with attached tag to it
 	   [docker hub ID]/[imageName]:[tag]  can be same or new imageName and version
 ====> docker push [docker hub ID]/[imageName]:[tag]
 
 
-11) pull image from docker hub
+12) pull image from docker hub
 ====> docker pull [docker hub ID]/[imageName]:[tag]
