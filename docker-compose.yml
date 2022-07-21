@@ -1,0 +1,25 @@
+version: "3"
+services:
+  mysqldb:
+    container_name: mysqldb
+    image: mysql
+    volumes:
+      - /c/Exatip/Tutorials/DockerTutorial/db:/var/lib/mysql
+    ports:
+      - 3308:3306
+    environment:
+      MYSQL_DATABASE: emp
+      MYSQL_ROOT_PASSWORD: emp@123
+  springboot-mysql-employee-cont:
+    container_name: springboot-mysql-employee-cont
+    image: springboot-mysql-employee-app
+    restart: always
+    ports:
+      - 5051:5050
+    environment:
+      MYSQL_HOST: mysqldb
+      MYSQL_PORT: 3306
+      MYSQL_DATABASE: emp
+      MYSQL_USER: root
+      MYSQL_PASSWORD: emp@123
+      SPRINGBOOT_APP_PORT: 5050
