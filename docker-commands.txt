@@ -41,7 +41,7 @@ Note : run will create new container whereas start restart stopped container
 10) run docker compose file
 ====> docker-compose up
 Note : if file is other than default file i.e. docker-compose.yml , then docker command would be 
-====> docker-compose -f[name of docker compose file] up
+====> docker-compose -f [name of docker compose file] up
 
 
 11) push image to docker hub
